@@ -1,0 +1,20 @@
+[package]
+name = "arcium_encrypted_compute"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "arcium_encrypted_compute"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+test-sbf = []
+
+[dependencies]
+anchor-lang = "0.32.1"

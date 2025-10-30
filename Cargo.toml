@@ -1,0 +1,14 @@
+[workspace]
+members = [
+    "programs/*"
+]
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+incremental = false
+
+[workspace.dependencies]
+anchor-lang = "0.32.1"

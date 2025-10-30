@@ -1,0 +1,127 @@
+{"level":"\u001b[32minfo\u001b[39m","message":"FHE key pair initialized","publicKeyId":"fhe-pub-1761752069151","securityLevel":128,"timestamp":"2025-10-29T15:34:29.156Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Connecting to database...","timestamp":"2025-10-29T15:34:29.249Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Database connected successfully (using in-memory storage for demo)","timestamp":"2025-10-29T15:34:29.251Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Database connected successfully.","timestamp":"2025-10-29T15:34:29.253Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Initializing privacy services...","timestamp":"2025-10-29T15:34:29.257Z"}
+{"endpoint":"/api/v1/zk-proof","level":"\u001b[32minfo\u001b[39m","message":"Privacy service registered: zk-proof-service","name":"zk-proof-service","tags":["zkp","privacy","crypto"],"timestamp":"2025-10-29T15:34:29.266Z"}
+{"endpoint":"/api/v1/encrypt","level":"\u001b[32minfo\u001b[39m","message":"Privacy service registered: encryption-service","name":"encryption-service","tags":["encryption","crypto"],"timestamp":"2025-10-29T15:34:29.277Z"}
+{"endpoint":"/api/v1/selective-disclosure","level":"\u001b[32minfo\u001b[39m","message":"Privacy service registered: selective-disclosure-service","name":"selective-disclosure-service","tags":["identity","verifiable-claims"],"timestamp":"2025-10-29T15:34:29.302Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Privacy service registry initialized with default services","timestamp":"2025-10-29T15:34:29.305Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"All privacy services initialized successfully","timestamp":"2025-10-29T15:34:29.325Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Services initialized successfully.","timestamp":"2025-10-29T15:34:29.341Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Arcium Privacy-as-a-Service Server running on port 8080","timestamp":"2025-10-29T15:34:29.541Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"API Documentation available at http://localhost:8080/api-docs","timestamp":"2025-10-29T15:34:29.551Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"FHE key pair initialized","publicKeyId":"fhe-pub-1761827989518","securityLevel":128,"timestamp":"2025-10-30T12:39:49.520Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Initializing comprehensive privacy services","timestamp":"2025-10-30T12:39:49.552Z"}
+{"attestationUrl":"https://attestation-service.example.com","enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","message":"Initializing TEE integration","timestamp":"2025-10-30T12:39:49.590Z"}
+{"enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","measurement":"f61d8470...","message":"TEE attestation completed","timestamp":"2025-10-30T12:39:49.596Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"TEE integration initialized successfully","timestamp":"2025-10-30T12:39:49.600Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"All privacy services initialized successfully","timestamp":"2025-10-30T12:39:49.607Z"}
+{"executionTime":563,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"encrypt","privacyLevel":"basic","timestamp":"2025-10-30T12:39:50.199Z"}
+{"executionTime":2,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"zk-proof","privacyLevel":"enhanced","timestamp":"2025-10-30T12:39:50.208Z"}
+{"error":"No shares found for id: mpc-1761827990221","level":"\u001b[31merror\u001b[39m","message":"MPC operation failed","timestamp":"2025-10-30T12:39:50.224Z"}
+{"executionTime":8,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"multi-party-compute","privacyLevel":"maximum","timestamp":"2025-10-30T12:39:50.228Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"FHE bootstrapping completed","newNoise":5,"oldNoise":100,"operationsSince":1,"timestamp":"2025-10-30T12:39:50.280Z"}
+{"executionTime":55,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"homomorphic","privacyLevel":"maximum","timestamp":"2025-10-30T12:39:50.289Z"}
+{"enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","measurement":"af15267a...","message":"TEE attestation completed","timestamp":"2025-10-30T12:39:50.301Z"}
+{"executionTime":8,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"tee-secure","privacyLevel":"maximum","timestamp":"2025-10-30T12:39:50.303Z"}
+{"executionTime":550,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"encrypt","privacyLevel":"basic","timestamp":"2025-10-30T12:39:50.866Z"}
+{"executionTime":0,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"zk-proof","privacyLevel":"enhanced","timestamp":"2025-10-30T12:39:50.867Z"}
+{"executionTime":553,"level":"\u001b[32minfo\u001b[39m","message":"Composite privacy operation completed","operations":["encrypt","zk-proof"],"privacyLevel":"enhanced","timestamp":"2025-10-30T12:39:50.869Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"FHE key pair initialized","publicKeyId":"fhe-pub-1761830763138","securityLevel":128,"timestamp":"2025-10-30T13:26:03.140Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Initializing comprehensive privacy services","timestamp":"2025-10-30T13:26:03.177Z"}
+{"attestationUrl":"https://attestation-service.example.com","enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","message":"Initializing TEE integration","timestamp":"2025-10-30T13:26:03.181Z"}
+{"enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","measurement":"a95fc5aa...","message":"TEE attestation completed","timestamp":"2025-10-30T13:26:03.187Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"TEE integration initialized successfully","timestamp":"2025-10-30T13:26:03.189Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"All privacy services initialized successfully","timestamp":"2025-10-30T13:26:03.194Z"}
+{"executionTime":546,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"encrypt","privacyLevel":"basic","timestamp":"2025-10-30T13:26:03.751Z"}
+{"executionTime":16,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"zk-proof","privacyLevel":"enhanced","timestamp":"2025-10-30T13:26:03.786Z"}
+{"error":"No shares found for id: mpc-1761830763877","level":"\u001b[31merror\u001b[39m","message":"MPC operation failed","timestamp":"2025-10-30T13:26:03.878Z"}
+{"executionTime":8,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"multi-party-compute","privacyLevel":"maximum","timestamp":"2025-10-30T13:26:03.881Z"}
+{"executionTime":46,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"homomorphic","privacyLevel":"maximum","timestamp":"2025-10-30T13:26:03.949Z"}
+{"enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","measurement":"3085b715...","message":"TEE attestation completed","timestamp":"2025-10-30T13:26:03.959Z"}
+{"executionTime":5,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"tee-secure","privacyLevel":"maximum","timestamp":"2025-10-30T13:26:03.961Z"}
+{"executionTime":736,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"encrypt","privacyLevel":"basic","timestamp":"2025-10-30T13:26:04.717Z"}
+{"executionTime":0,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"zk-proof","privacyLevel":"enhanced","timestamp":"2025-10-30T13:26:04.718Z"}
+{"executionTime":740,"level":"\u001b[32minfo\u001b[39m","message":"Composite privacy operation completed","operations":["encrypt","zk-proof"],"privacyLevel":"enhanced","timestamp":"2025-10-30T13:26:04.720Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"FHE key pair initialized","publicKeyId":"fhe-pub-1761832737932","securityLevel":128,"timestamp":"2025-10-30T13:58:57.935Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Initializing comprehensive privacy services","timestamp":"2025-10-30T13:58:57.956Z"}
+{"attestationUrl":"https://attestation-service.example.com","enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","message":"Initializing TEE integration","timestamp":"2025-10-30T13:58:57.959Z"}
+{"enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","measurement":"0fe5cdea...","message":"TEE attestation completed","timestamp":"2025-10-30T13:58:57.964Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"TEE integration initialized successfully","timestamp":"2025-10-30T13:58:57.967Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"All privacy services initialized successfully","timestamp":"2025-10-30T13:58:57.973Z"}
+{"executionTime":898,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"encrypt","privacyLevel":"basic","timestamp":"2025-10-30T13:58:58.909Z"}
+{"executionTime":1,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"zk-proof","privacyLevel":"enhanced","timestamp":"2025-10-30T13:58:58.917Z"}
+{"error":"No shares found for id: mpc-1761832738924","level":"\u001b[31merror\u001b[39m","message":"MPC operation failed","timestamp":"2025-10-30T13:58:58.924Z"}
+{"executionTime":8,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"multi-party-compute","privacyLevel":"maximum","timestamp":"2025-10-30T13:58:58.930Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"FHE bootstrapping completed","newNoise":5,"oldNoise":100,"operationsSince":1,"timestamp":"2025-10-30T13:58:58.978Z"}
+{"executionTime":43,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"homomorphic","privacyLevel":"maximum","timestamp":"2025-10-30T13:58:58.980Z"}
+{"enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","measurement":"e4a75a12...","message":"TEE attestation completed","timestamp":"2025-10-30T13:58:58.988Z"}
+{"executionTime":7,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"tee-secure","privacyLevel":"maximum","timestamp":"2025-10-30T13:58:58.992Z"}
+{"executionTime":546,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"encrypt","privacyLevel":"basic","timestamp":"2025-10-30T13:58:59.546Z"}
+{"executionTime":1,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"zk-proof","privacyLevel":"enhanced","timestamp":"2025-10-30T13:58:59.555Z"}
+{"executionTime":561,"level":"\u001b[32minfo\u001b[39m","message":"Composite privacy operation completed","operations":["encrypt","zk-proof"],"privacyLevel":"enhanced","timestamp":"2025-10-30T13:58:59.561Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"FHE key pair initialized","publicKeyId":"fhe-pub-1761832948323","securityLevel":128,"timestamp":"2025-10-30T14:02:28.324Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Initializing comprehensive privacy services","timestamp":"2025-10-30T14:02:28.337Z"}
+{"attestationUrl":"https://attestation-service.example.com","enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","message":"Initializing TEE integration","timestamp":"2025-10-30T14:02:28.339Z"}
+{"enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","measurement":"202d23b7...","message":"TEE attestation completed","timestamp":"2025-10-30T14:02:28.343Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"TEE integration initialized successfully","timestamp":"2025-10-30T14:02:28.345Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"All privacy services initialized successfully","timestamp":"2025-10-30T14:02:28.349Z"}
+{"executionTime":340,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"encrypt","privacyLevel":"basic","timestamp":"2025-10-30T14:02:28.699Z"}
+{"executionTime":1,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"zk-proof","privacyLevel":"enhanced","timestamp":"2025-10-30T14:02:28.703Z"}
+{"error":"No shares found for id: mpc-1761832948707","level":"\u001b[31merror\u001b[39m","message":"MPC operation failed","timestamp":"2025-10-30T14:02:28.707Z"}
+{"executionTime":3,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"multi-party-compute","privacyLevel":"maximum","timestamp":"2025-10-30T14:02:28.709Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"FHE bootstrapping completed","newNoise":5,"oldNoise":100,"operationsSince":1,"timestamp":"2025-10-30T14:02:28.741Z"}
+{"executionTime":28,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"homomorphic","privacyLevel":"maximum","timestamp":"2025-10-30T14:02:28.743Z"}
+{"enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","measurement":"f3a88e91...","message":"TEE attestation completed","timestamp":"2025-10-30T14:02:28.750Z"}
+{"executionTime":3,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"tee-secure","privacyLevel":"maximum","timestamp":"2025-10-30T14:02:28.751Z"}
+{"executionTime":354,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"encrypt","privacyLevel":"basic","timestamp":"2025-10-30T14:02:29.110Z"}
+{"executionTime":0,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"zk-proof","privacyLevel":"enhanced","timestamp":"2025-10-30T14:02:29.112Z"}
+{"executionTime":357,"level":"\u001b[32minfo\u001b[39m","message":"Composite privacy operation completed","operations":["encrypt","zk-proof"],"privacyLevel":"enhanced","timestamp":"2025-10-30T14:02:29.113Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"FHE key pair initialized","publicKeyId":"fhe-pub-1761834429327","securityLevel":128,"timestamp":"2025-10-30T14:27:09.333Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Initializing comprehensive privacy services","timestamp":"2025-10-30T14:27:09.372Z"}
+{"attestationUrl":"https://attestation-service.example.com","enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","message":"Initializing TEE integration","timestamp":"2025-10-30T14:27:09.375Z"}
+{"enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","measurement":"259a67a5...","message":"TEE attestation completed","timestamp":"2025-10-30T14:27:09.380Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"TEE integration initialized successfully","timestamp":"2025-10-30T14:27:09.384Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"All privacy services initialized successfully","timestamp":"2025-10-30T14:27:09.385Z"}
+{"executionTime":674,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"encrypt","privacyLevel":"basic","timestamp":"2025-10-30T14:27:10.071Z"}
+{"executionTime":0,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"zk-proof","privacyLevel":"enhanced","timestamp":"2025-10-30T14:27:10.076Z"}
+{"error":"No shares found for id: mpc-1761834430084","level":"\u001b[31merror\u001b[39m","message":"MPC operation failed","timestamp":"2025-10-30T14:27:10.085Z"}
+{"executionTime":5,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"multi-party-compute","privacyLevel":"maximum","timestamp":"2025-10-30T14:27:10.087Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"FHE bootstrapping completed","newNoise":5,"oldNoise":88,"operationsSince":1,"timestamp":"2025-10-30T14:27:10.137Z"}
+{"executionTime":47,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"homomorphic","privacyLevel":"maximum","timestamp":"2025-10-30T14:27:10.138Z"}
+{"enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","measurement":"edfbbd11...","message":"TEE attestation completed","timestamp":"2025-10-30T14:27:10.159Z"}
+{"executionTime":18,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"tee-secure","privacyLevel":"maximum","timestamp":"2025-10-30T14:27:10.160Z"}
+{"executionTime":719,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"encrypt","privacyLevel":"basic","timestamp":"2025-10-30T14:27:10.885Z"}
+{"executionTime":0,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"zk-proof","privacyLevel":"enhanced","timestamp":"2025-10-30T14:27:10.886Z"}
+{"executionTime":720,"level":"\u001b[32minfo\u001b[39m","message":"Composite privacy operation completed","operations":["encrypt","zk-proof"],"privacyLevel":"enhanced","timestamp":"2025-10-30T14:27:10.886Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"FHE key pair initialized","publicKeyId":"fhe-pub-1761842547154","securityLevel":128,"timestamp":"2025-10-30T16:42:27.155Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Initializing comprehensive privacy services","timestamp":"2025-10-30T16:42:27.165Z"}
+{"attestationUrl":"https://attestation-service.example.com","enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","message":"Initializing TEE integration","timestamp":"2025-10-30T16:42:27.167Z"}
+{"enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","measurement":"0c52c2c4...","message":"TEE attestation completed","timestamp":"2025-10-30T16:42:27.172Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"TEE integration initialized successfully","timestamp":"2025-10-30T16:42:27.174Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"All privacy services initialized successfully","timestamp":"2025-10-30T16:42:27.175Z"}
+{"executionTime":265,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"encrypt","privacyLevel":"basic","timestamp":"2025-10-30T16:42:27.450Z"}
+{"executionTime":0,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"zk-proof","privacyLevel":"enhanced","timestamp":"2025-10-30T16:42:27.453Z"}
+{"error":"No shares found for id: mpc-1761842547458","level":"\u001b[31merror\u001b[39m","message":"MPC operation failed","timestamp":"2025-10-30T16:42:27.459Z"}
+{"executionTime":4,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"multi-party-compute","privacyLevel":"maximum","timestamp":"2025-10-30T16:42:27.461Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"FHE bootstrapping completed","newNoise":5,"oldNoise":100,"operationsSince":1,"timestamp":"2025-10-30T16:42:27.499Z"}
+{"executionTime":19,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"homomorphic","privacyLevel":"maximum","timestamp":"2025-10-30T16:42:27.501Z"}
+{"enclaveId":"test-enclave","level":"\u001b[32minfo\u001b[39m","measurement":"8adcb24b...","message":"TEE attestation completed","timestamp":"2025-10-30T16:42:27.508Z"}
+{"executionTime":3,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"tee-secure","privacyLevel":"maximum","timestamp":"2025-10-30T16:42:27.509Z"}
+{"executionTime":238,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"encrypt","privacyLevel":"basic","timestamp":"2025-10-30T16:42:27.751Z"}
+{"executionTime":0,"level":"\u001b[32minfo\u001b[39m","message":"Privacy operation completed","operation":"zk-proof","privacyLevel":"enhanced","timestamp":"2025-10-30T16:42:27.752Z"}
+{"executionTime":240,"level":"\u001b[32minfo\u001b[39m","message":"Composite privacy operation completed","operations":["encrypt","zk-proof"],"privacyLevel":"enhanced","timestamp":"2025-10-30T16:42:27.753Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"FHE key pair initialized","publicKeyId":"fhe-pub-1761844490329","securityLevel":128,"timestamp":"2025-10-30T17:14:50.330Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Connecting to database...","timestamp":"2025-10-30T17:14:50.380Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Database connected successfully (using in-memory storage for demo)","timestamp":"2025-10-30T17:14:50.382Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Database connected successfully.","timestamp":"2025-10-30T17:14:50.382Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Initializing privacy services...","timestamp":"2025-10-30T17:14:50.383Z"}
+{"endpoint":"/api/v1/zk-proof","level":"\u001b[32minfo\u001b[39m","message":"Privacy service registered: zk-proof-service","name":"zk-proof-service","tags":["zkp","privacy","crypto"],"timestamp":"2025-10-30T17:14:50.384Z"}
+{"endpoint":"/api/v1/encrypt","level":"\u001b[32minfo\u001b[39m","message":"Privacy service registered: encryption-service","name":"encryption-service","tags":["encryption","crypto"],"timestamp":"2025-10-30T17:14:50.385Z"}
+{"endpoint":"/api/v1/selective-disclosure","level":"\u001b[32minfo\u001b[39m","message":"Privacy service registered: selective-disclosure-service","name":"selective-disclosure-service","tags":["identity","verifiable-claims"],"timestamp":"2025-10-30T17:14:50.385Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Privacy service registry initialized with default services","timestamp":"2025-10-30T17:14:50.386Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"All privacy services initialized successfully","timestamp":"2025-10-30T17:14:50.389Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Services initialized successfully.","timestamp":"2025-10-30T17:14:50.389Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Arcium Privacy-as-a-Service Server running on port 8080","timestamp":"2025-10-30T17:14:50.509Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"API Documentation available at http://localhost:8080/api-docs","timestamp":"2025-10-30T17:14:50.510Z"}

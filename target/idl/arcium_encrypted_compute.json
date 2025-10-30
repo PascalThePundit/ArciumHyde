@@ -1,0 +1,218 @@
+{
+  "version": "0.1.0",
+  "name": "arcium_encrypted_compute",
+  "instructions": [
+    {
+      "name": "initializeEncryptedCompute",
+      "accounts": [
+        {
+          "name": "encryptedCompute",
+          "isMut": true,
+          "isSigner": false,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "type": "string",
+                "value": "encrypted_compute"
+              },
+              {
+                "kind": "account",
+                "type": "publicKey",
+                "path": "user"
+              },
+              {
+                "kind": "arg",
+                "type": "string",
+                "path": "data_hash"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "dataHash",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "updateEncryptedData",
+      "accounts": [
+        {
+          "name": "encryptedCompute",
+          "isMut": true,
+          "isSigner": false,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "type": "string",
+                "value": "encrypted_compute"
+              },
+              {
+                "kind": "account",
+                "type": "publicKey",
+                "path": "encrypted_compute.authority"
+              },
+              {
+                "kind": "account",
+                "type": "string",
+                "path": "encrypted_compute.data_hash"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        }
+      ],
+      "args": [
+        {
+          "name": "encryptedData",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "processEncryptedComputation",
+      "accounts": [
+        {
+          "name": "encryptedCompute",
+          "isMut": true,
+          "isSigner": false,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "type": "string",
+                "value": "encrypted_compute"
+              },
+              {
+                "kind": "account",
+                "type": "publicKey",
+                "path": "encrypted_compute.authority"
+              },
+              {
+                "kind": "account",
+                "type": "string",
+                "path": "encrypted_compute.data_hash"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "closeEncryptedCompute",
+      "accounts": [
+        {
+          "name": "encryptedCompute",
+          "isMut": true,
+          "isSigner": false,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "type": "string",
+                "value": "encrypted_compute"
+              },
+              {
+                "kind": "account",
+                "type": "publicKey",
+                "path": "encrypted_compute.authority"
+              },
+              {
+                "kind": "account",
+                "type": "string",
+                "path": "encrypted_compute.data_hash"
+              }
+            ]
+          },
+          "close": "user"
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "EncryptedCompute",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "dataHash",
+            "type": "string"
+          },
+          {
+            "name": "encryptedData",
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "type": "string"
+          },
+          {
+            "name": "createdAt",
+            "type": "i64"
+          },
+          {
+            "name": "updatedAt",
+            "type": "i64"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "Unauthorized",
+      "msg": "Unauthorized access to account"
+    },
+    {
+      "code": 6001,
+      "name": "InvalidData",
+      "msg": "Invalid data provided"
+    },
+    {
+      "code": 6002,
+      "name": "DataTooLong",
+      "msg": "Data provided is too long"
+    },
+    {
+      "code": 6003,
+      "name": "NoEncryptedData",
+      "msg": "No encrypted data found in account"
+    }
+  ]
+}

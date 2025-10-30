@@ -1,0 +1,30 @@
+{
+  "name": "arcium-privacy-demo-dapp",
+  "version": "1.0.0",
+  "description": "Example dApp demonstrating Arcium Privacy-as-a-Service integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "privacy",
+    "blockchain",
+    "solana",
+    "zkp",
+    "zero-knowledge",
+    "dapp",
+    "encryption"
+  ],
+  "author": "Arcium Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "@arcium/privacy-sdk": "file:../../src/sdk",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
