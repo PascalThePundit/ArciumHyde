@@ -13,19 +13,22 @@ const Header: React.FC = () => {
         </Link>
         <div className="flex space-x-6">
           <Link href="/dashboard" className="text-gray-200 hover:text-primary-purple transition-colors duration-300">
-            Dashboard
+            Use Cases
+          </Link>
+          <Link href="/how-to-use" className="text-gray-200 hover:text-primary-purple transition-colors duration-300">
+            Integration Guide
           </Link>
           <Link href="/zk-proofs" className="text-gray-200 hover:text-primary-purple transition-colors duration-300">
-            ZK Proofs
+            Age Verification
           </Link>
           <Link href="/multiparty-computation" className="text-gray-200 hover:text-primary-purple transition-colors duration-300">
-            MPC
+            Private Verification
           </Link>
-          <Link href="/docs" className="text-gray-200 hover:text-primary-purple transition-colors duration-300">
-            Documentation
+          <Link href="/selective-disclosure" className="text-gray-200 hover:text-primary-purple transition-colors duration-300">
+            Identity
           </Link>
           <Link href="/advanced-privacy-demo" className="text-gray-200 hover:text-primary-purple transition-colors duration-300">
-            HYDE Transform
+            Medical Research
           </Link>
         </div>
       </nav>

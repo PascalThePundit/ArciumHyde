@@ -22,18 +22,23 @@ const AdvancedPrivacyDemoPage: React.FC = () => {
       const inputNum = parseFloat(inputValue);
       let resultValue: number;
       
+      let operationDescription = '';
       switch (operation) {
         case 'add':
-          resultValue = inputNum + 10; // Simulated homomorphic addition
+          resultValue = inputNum + 20; // Add risk threshold
+          operationDescription = 'Added risk threshold to health metric';
           break;
         case 'multiply':
-          resultValue = inputNum * 2; // Simulated homomorphic multiplication
+          resultValue = inputNum * 0.8; // Risk factor
+          operationDescription = 'Applied risk factor to health metric';
           break;
         case 'square':
-          resultValue = inputNum * inputNum; // Simulated homomorphic squaring
+          resultValue = inputNum * inputNum; // Risk index calculation
+          operationDescription = 'Calculated risk index from health metric';
           break;
         default:
           resultValue = inputNum;
+          operationDescription = 'No operation performed';
       }
       
       setEncryptedData(`Encrypted(${inputValue})`);
@@ -54,38 +59,38 @@ const AdvancedPrivacyDemoPage: React.FC = () => {
               <span className="text-white font-bold">M</span>
               <span className="text-primary-purple font-extrabold">HYDE</span>
             </h1>
-            <h2 className="text-2xl font-bold text-white mb-4">Homomorphic Encryption Demo</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Secure Medical Research</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Perform computations on encrypted data without ever decrypting it - just like Dr. Jekyll and Mr. Hyde, 
-              the data has two forms but maintains its core identity throughout transformations.
+              Analyze sensitive patient data across multiple hospitals without exposing individual records. 
+              Computations performed on encrypted data maintain privacy while enabling valuable research insights.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             <Card>
-              <h3 className="text-xl font-semibold text-white mb-4">Input Data</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">Patient Data</h3>
               <div className="space-y-4">
                 <div>
-                  <label className="block text-gray-400 text-sm mb-2">Enter a number:</label>
+                  <label className="block text-gray-400 text-sm mb-2">Health Metric (e.g., Blood Pressure):</label>
                   <input
                     type="number"
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     className="w-full p-3 bg-gray-800 rounded-lg text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-purple"
-                    placeholder="e.g., 42"
+                    placeholder="e.g., 120"
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-gray-400 text-sm mb-2">Operation:</label>
+                  <label className="block text-gray-400 text-sm mb-2">Research Operation:</label>
                   <select
                     value={operation}
                     onChange={(e) => setOperation(e.target.value)}
                     className="w-full p-3 bg-gray-800 rounded-lg text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-purple"
                   >
-                    <option value="add">Add 10</option>
-                    <option value="multiply">Multiply by 2</option>
-                    <option value="square">Square the value</option>
+                    <option value="add">Add Risk Threshold (20)</option>
+                    <option value="multiply">Multiply by Risk Factor (0.8)</option>
+                    <option value="square">Calculate Risk Index</option>
                   </select>
                 </div>
                 
@@ -94,24 +99,24 @@ const AdvancedPrivacyDemoPage: React.FC = () => {
                   disabled={isLoading || !inputValue}
                   className="w-full"
                 >
-                  {isLoading ? 'Computing on Encrypted Data...' : 'Perform HYDE Transformation'}
+                  {isLoading ? 'Computing on Encrypted Medical Data...' : 'Perform Secure Analysis'}
                 </Button>
               </div>
             </Card>
 
             <Card>
-              <h3 className="text-xl font-semibold text-white mb-4">HYDE Transformation Process</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">Secure Analysis Process</h3>
               <div className="space-y-6">
                 <div className="p-4 bg-gray-900 rounded-lg">
-                  <h4 className="text-lg font-medium text-primary-purple mb-2">Original Data</h4>
+                  <h4 className="text-lg font-medium text-primary-purple mb-2">Patient Data</h4>
                   <p className="text-2xl font-bold text-white">
                     {originalData ? originalData : '?'}
                   </p>
-                  <p className="text-gray-400 text-sm mt-1">Dr. Jekyll (Plain text)</p>
+                  <p className="text-gray-400 text-sm mt-1">Dr. Jekyll (Private record)</p>
                 </div>
                 
                 <div className="p-4 bg-gray-900 rounded-lg">
-                  <h4 className="text-lg font-medium text-primary-purple mb-2">Encrypted Data</h4>
+                  <h4 className="text-lg font-medium text-primary-purple mb-2">Encrypted Record</h4>
                   <p className="text-xl font-mono text-gray-300 break-all">
                     {encryptedData || 'Encrypted data appears here...'}
                   </p>
@@ -119,11 +124,11 @@ const AdvancedPrivacyDemoPage: React.FC = () => {
                 </div>
                 
                 <div className="p-4 bg-gradient-to-r from-primary-purple/20 to-transparent rounded-lg border border-primary-purple/50">
-                  <h4 className="text-lg font-medium text-primary-purple mb-2">Transformation Result</h4>
+                  <h4 className="text-lg font-medium text-primary-purple mb-2">Research Result</h4>
                   <p className="text-2xl font-bold text-white">
                     {result || '?'}
                   </p>
-                  <p className="text-gray-400 text-sm mt-1">Result of computation on encrypted data</p>
+                  <p className="text-gray-400 text-sm mt-1">Computed without revealing patient data</p>
                 </div>
               </div>
             </Card>
@@ -150,12 +155,12 @@ const AdvancedPrivacyDemoPage: React.FC = () => {
           </div>
 
           <Card className="text-center">
-            <h3 className="text-xl font-semibold text-white mb-4">About HYDE Transformations</h3>
+            <h3 className="text-xl font-semibold text-white mb-4">About Secure Medical Research</h3>
             <p className="text-gray-300 mb-4">
               Just as Dr. Jekyll transforms into Mr. Hyde while remaining fundamentally the same person,
-              your data transforms into an encrypted form while maintaining its mathematical properties.
-              This allows computations to be performed on the encrypted data, producing results that can
-              be decrypted to reveal the same answer as if the operations were performed on the original data.
+              patient data can exist in encrypted form while maintaining its mathematical properties.
+              This allows researchers to analyze sensitive medical data, producing results that advance 
+              medical knowledge without compromising patient privacy.
             </p>
           </Card>
         </div>

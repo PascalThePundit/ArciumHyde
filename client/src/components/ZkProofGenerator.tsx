@@ -15,20 +15,24 @@ const ZkProofGenerator: React.FC = () => {
     setError(null);
     setError(null);
     if (!inputData.trim()) {
-      setError('Input data cannot be empty.');
+      setError('Age cannot be empty.');
       setLoading(false);
       return;
     }
 
-    if (isNaN(Number(inputData))) {
-      setError('Input data must be a valid number.');
+    const age = parseFloat(inputData);
+    if (isNaN(age)) {
+      setError('Please enter a valid age.');
       setLoading(false);
       return;
     }
 
     try {
-      // In a real app, inputData would be parsed and validated
-      const generatedProof = await generateZKProof({ value: inputData });
+      // Generate an age verification proof - check if age is above 18
+      const generatedProof = await generateZKProof({ 
+        value: age,
+        description: `Age verification: ${age} years old, proving over 18`
+      });
       setProof(generatedProof);
     } catch (err: any) {
       console.error('Error generating ZK proof:', err);
@@ -40,24 +44,24 @@ const ZkProofGenerator: React.FC = () => {
 
   return (
     <Card className="max-w-md mx-auto p-6">
-      <h2 className="text-2xl font-bold text-white mb-4">ZK Proof Generator</h2>
-      <p className="text-gray-300 mb-4">Generate a zero-knowledge proof for your private data.</p>
+      <h2 className="text-2xl font-bold text-white mb-4">Age Verification</h2>
+      <p className="text-gray-300 mb-4">Prove you're over 18 without revealing your exact age.</p>
       <div className="mb-4">
         <label htmlFor="inputData" className="block text-gray-400 text-sm font-bold mb-2">
-          Private Input Data:
+          Your Age:
         </label>
         <input
-          type="text"
+          type="number"
           id="inputData"
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-gray-700"
           value={inputData}
           onChange={(e) => setInputData(e.target.value)}
-          placeholder="e.g., 12345"
+          placeholder="e.g., 25"
           disabled={loading}
         />
       </div>
       <Button onClick={handleGenerateProof} disabled={loading}>
-        {loading ? 'Generating...' : 'Generate Proof'}
+        {loading ? 'Generating Age Proof...' : 'Verify Age Privately'}
       </Button>
       {error && (
         <div className="mt-4 p-3 bg-red-800 rounded border border-red-700 text-sm break-all text-white">

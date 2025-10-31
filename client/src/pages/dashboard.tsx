@@ -76,36 +76,36 @@ const DashboardPage: React.FC = () => {
             {/* Main Controls */}
             <div className="lg:col-span-2">
               <Card className="mb-6">
-                <h2 className="text-2xl font-bold text-white mb-6">System Functionality</h2>
+                <h2 className="text-2xl font-bold text-white mb-6">Real-World Privacy Use Cases</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Link href="/zk-proofs">
                     <Card className="cursor-pointer transition-all hover:bg-primary-purple/10 border-2 border-transparent hover:border-primary-purple">
-                      <h3 className="text-xl font-semibold text-white mb-2">Zero-Knowledge Proofs</h3>
-                      <p className="text-gray-400 mb-4">Verify statements without revealing private data</p>
+                      <h3 className="text-xl font-semibold text-white mb-2">Age Verification</h3>
+                      <p className="text-gray-400 mb-4">Prove age requirements without revealing exact date</p>
                       <Button className="w-full">Try Now</Button>
                     </Card>
                   </Link>
 
-                  <Link href="/dashboard">
+                  <Link href="/multiparty-computation">
                     <Card className="cursor-pointer transition-all hover:bg-primary-purple/10 border-2 border-transparent hover:border-primary-purple">
-                      <h3 className="text-xl font-semibold text-white mb-2">Multi-Party Computation</h3>
-                      <p className="text-gray-400 mb-4">Secure computation across multiple parties</p>
+                      <h3 className="text-xl font-semibold text-white mb-2">Private Salary Verification</h3>
+                      <p className="text-gray-400 mb-4">Verify income for loans without revealing exact salary</p>
                       <Button className="w-full">Try Now</Button>
                     </Card>
                   </Link>
 
                   <Link href="/selective-encryption-demo">
                     <Card className="cursor-pointer transition-all hover:bg-primary-purple/10 border-2 border-transparent hover:border-primary-purple">
-                      <h3 className="text-xl font-semibold text-white mb-2">Homomorphic Encryption</h3>
-                      <p className="text-gray-400 mb-4">Computations on encrypted data</p>
+                      <h3 className="text-xl font-semibold text-white mb-2">Secure Medical Research</h3>
+                      <p className="text-gray-400 mb-4">Analyze health data across institutions privately</p>
                       <Button className="w-full">Try Now</Button>
                     </Card>
                   </Link>
 
                   <Link href="/advanced-privacy-demo">
                     <Card className="cursor-pointer transition-all hover:bg-primary-purple/10 border-2 border-transparent hover:border-primary-purple">
-                      <h3 className="text-xl font-semibold text-white mb-2">Trusted Execution</h3>
-                      <p className="text-gray-400 mb-4">Secure operations in protected hardware</p>
+                      <h3 className="text-xl font-semibold text-white mb-2">Confidential Voting</h3>
+                      <p className="text-gray-400 mb-4">Verify election results without revealing votes</p>
                       <Button className="w-full">Try Now</Button>
                     </Card>
                   </Link>
@@ -134,6 +134,27 @@ const DashboardPage: React.FC = () => {
                 </div>
               </Card>
             </div>
+          </div>
+
+          {/* Additional Use Cases */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="text-center">
+              <h3 className="text-xl font-semibold text-white mb-4">Credit Scoring</h3>
+              <p className="text-gray-400 mb-4">Prove creditworthiness without revealing financial details</p>
+              <Button className="w-full">Explore</Button>
+            </Card>
+
+            <Card className="text-center">
+              <h3 className="text-xl font-semibold text-white mb-4">Supply Chain</h3>
+              <p className="text-gray-400 mb-4">Verify product authenticity without revealing proprietary processes</p>
+              <Button className="w-full">Explore</Button>
+            </Card>
+
+            <Card className="text-center">
+              <h3 className="text-xl font-semibold text-white mb-4">Private Analytics</h3>
+              <p className="text-gray-400 mb-4">Cross-company analysis without sharing sensitive data</p>
+              <Button className="w-full">Explore</Button>
+            </Card>
           </div>
 
           {/* Additional Controls */}

@@ -135,7 +135,7 @@ npm run dev
 
 ## 🎯 Usage Examples
 
-### Basic Encryption
+### Getting Started
 ```typescript
 import { ArciumPrivacy } from '@arcium/privacy-sdk';
 
@@ -143,12 +143,79 @@ const privacy = new ArciumPrivacy({
   apiKey: 'your-api-key',
   baseUrl: 'https://api.arcium-privacy.com'
 });
+```
 
+### Basic Encryption
+```typescript
 // Encrypt sensitive data
 const encrypted = await privacy.encrypt('sensitive data', 'password');
 
 // Decrypt data
 const decrypted = await privacy.decrypt(encrypted, 'password');
+```
+
+### How to Use ARCIUM HYDE in Your System
+
+#### 1. Supply Chain Verification
+Verify product authenticity and compliance without revealing proprietary manufacturing processes:
+
+```typescript
+// Verify product authenticity without revealing supplier details
+const proof = await privacy.prove('product-authenticity', {
+  productId: 'PROD-12345',
+  manufacturerId: 'MFG-67890',
+  complianceRequirements: ['ISO-9001', 'FDA-approved']
+});
+
+// Verify the proof
+const isValid = await privacy.verify(proof);
+```
+
+#### 2. Credit Scoring
+Enable financial institutions to perform risk assessments without exposing sensitive financial details:
+
+```typescript
+// Perform private salary verification for loan eligibility
+const salaryVerification = await privacy.performMPC([userIncome, minRequired], 'gt');
+
+// Use homomorphic encryption for risk calculations
+const encryptedIncome = await privacy.encrypt(userIncome, 'risk-model-key');
+const riskScore = await privacy.performFHE(encryptedIncome, 'multiply', riskFactor);
+```
+
+#### 3. Private Data Analysis
+Perform analytics across multiple organizations without exposing sensitive datasets:
+
+```typescript
+// Analyze data patterns while preserving privacy
+const encryptedDataA = await privacy.encrypt(dataA, 'analysis-key');
+const encryptedDataB = await privacy.encrypt(dataB, 'analysis-key');
+
+// Perform operations on encrypted data
+const analysisResult = await privacy.performFHE(encryptedDataA, 'multiply', encryptedDataB);
+```
+
+#### 4. Identity Verification
+Verify identity attributes without revealing complete profiles:
+
+```typescript
+// Prove age requirement without revealing exact date
+const ageProof = await privacy.prove('range', {
+  value: 25, // Private value
+  min: 18,
+  max: 100
+});
+
+const isValid = await privacy.verify(ageProof);
+```
+
+#### 5. Healthcare Applications
+Analyze medical data while preserving patient privacy:
+
+```typescript
+// Perform secure analysis on encrypted medical records
+const encryptedRecord = await privacy.encrypt(medicalData, 'patient-key');
+const analysisResult = await privacy.performFHE(encryptedRecord, 'add', researchParameter);
 ```
 
 ### Zero-Knowledge Proofs

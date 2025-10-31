@@ -100,13 +100,13 @@ const HomePage: React.FC = () => {
 
           <div className="text-center">
             <div className="inline-block p-8 bg-gradient-to-br from-gray-900 to-black rounded-2xl border border-gray-700">
-              <h2 className="text-2xl font-bold text-white mb-4">Ready to explore privacy technologies?</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">Solve Real Privacy Challenges</h2>
               <p className="text-gray-400 mb-6 max-w-md">
-                Start with any privacy feature or navigate to the dashboard for comprehensive system controls.
+                Explore practical demonstrations of privacy technologies solving real-world challenges.
               </p>
               <div className="flex justify-center space-x-4">
                 <Button onClick={() => window.location.href='/dashboard'}>
-                  Go to Dashboard
+                  Explore Use Cases
                 </Button>
                 <Button onClick={() => window.location.href='/docs'}>
                   View Documentation

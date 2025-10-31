@@ -33,11 +33,11 @@ const BalanceThresholdProof: React.FC = () => {
 
   return (
     <Card className="max-w-md mx-auto p-6 mt-8">
-      <h2 className="text-2xl font-bold text-white mb-4">Balance Threshold Proof</h2>
-      <p className="text-gray-300 mb-4">Prove your balance is above a threshold without revealing the exact amount.</p>
+      <h2 className="text-2xl font-bold text-white mb-4">Income Verification</h2>
+      <p className="text-gray-300 mb-4">Prove your income meets requirements without revealing the exact amount.</p>
       <div className="mb-4">
         <label htmlFor="balance" className="block text-gray-400 text-sm font-bold mb-2">
-          Your Balance:
+          Your Monthly Income ($):
         </label>
         <input
           type="number"
@@ -45,13 +45,13 @@ const BalanceThresholdProof: React.FC = () => {
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-gray-700"
           value={balance}
           onChange={(e) => setBalance(e.target.value)}
-          placeholder="e.g., 1000"
+          placeholder="e.g., 5000"
           disabled={loading}
         />
       </div>
       <div className="mb-4">
         <label htmlFor="threshold" className="block text-gray-400 text-sm font-bold mb-2">
-          Threshold:
+          Required Minimum ($):
         </label>
         <input
           type="number"
@@ -59,16 +59,16 @@ const BalanceThresholdProof: React.FC = () => {
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-gray-700"
           value={threshold}
           onChange={(e) => setThreshold(e.target.value)}
-          placeholder="e.g., 500"
+          placeholder="e.g., 3000"
           disabled={loading}
         />
       </div>
       <Button onClick={handleGenerateProof} disabled={loading}>
-        {loading ? 'Generating...' : 'Generate Threshold Proof'}
+        {loading ? 'Generating Verification...' : 'Verify Income Privately'}
       </Button>
       {proof && (
         <div className="mt-4 p-3 bg-gray-800 rounded border border-gray-700 text-sm break-all">
-          <p className="text-gray-400">Generated Proof:</p>
+          <p className="text-gray-400">Verification Proof:</p>
           <p className="text-primary-purple">{proof}</p>
         </div>
       )}
